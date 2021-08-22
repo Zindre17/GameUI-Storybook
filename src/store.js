@@ -21,3 +21,13 @@ const TaskBox = () => {
     };
 };
 export const taskStore = TaskBox();
+
+const AppState = () => {
+    const { subscribe, update } = writable(false);
+    return {
+        subscribe,
+        error: () => update(error => !error),
+    };
+};
+
+export const AppStore = AppState();
