@@ -27,6 +27,7 @@
     "@storybook/addon-actions": "^6.3.0",
     "@storybook/addon-essentials": "^6.3.0",
     "@storybook/addon-links": "^6.3.0",
+    "@storybook/addon-storyshots": "^6.3.7",
     "@storybook/addon-svelte-csf": "^1.1.0",
     "@storybook/svelte": "^6.3.0",
     "@testing-library/jest-dom": "^5.11.8",
@@ -49,8 +50,12 @@
   "jest": {
     "transform": {
       "^.+\\.js$": "babel-jest",
+      "^.+\\.stories\\.[jt]sx?$": "<rootDir>node_modules/@storybook/addon-storyshots/injectFileName",
       "^.+\\.svelte$": "jest-transform-svelte"
     },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(@storybook/svelte)/)"
+    ],
     "moduleFileExtensions": [
       "js",
       "svelte",
