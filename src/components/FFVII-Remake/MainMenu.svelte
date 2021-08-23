@@ -5,5 +5,5 @@
 </script>
 
 {#each items as item}
-    <MainMenuEntry label={item} />
+    <MainMenuEntry {item} />
 {/each}

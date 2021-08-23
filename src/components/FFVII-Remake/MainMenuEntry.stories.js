@@ -7,7 +7,10 @@ export default {
 
 export const Default = () => ({
     Component: MainMenuEntry,
-    args: {
-        label: "New Game"
+    props: {
+        item: {
+            label: "New Game",
+            onClick: () => { },
+        },
     }
 });

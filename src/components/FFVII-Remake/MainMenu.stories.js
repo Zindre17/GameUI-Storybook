@@ -8,6 +8,13 @@ export default {
 export const Default = () => ({
     Comment: MainMenu,
     props: {
-        items: ["New Game", "Continue", "Load Game", "Download Save Data", "Options", "Square Enix Members"],
+        items: [
+            { label: "New Game", onClick: () => { } },
+            { label: "Continue", onClick: () => { } },
+            { label: "Load Game", onClick: () => { } },
+            { label: "Download Save Data", onClick: () => { } },
+            { label: "Options", onClick: () => { } },
+            { label: "Square Enix Members", onClick: () => { } }
+        ],
     }
 });

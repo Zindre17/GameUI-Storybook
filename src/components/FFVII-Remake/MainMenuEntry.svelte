@@ -1,5 +1,8 @@
 <script>
-    export let label = "label";
+    export let item = {
+        label: "Label",
+        onClick: () => {},
+    };
 
     let isHover = false;
 
@@ -11,14 +14,20 @@
     }
 </script>
 
-<div class="container" on:mouseenter={onEnter} on:mouseleave={onLeave} on:click>
+<div class="container">
     <div class="bar" class:hover={isHover} />
-    <div class="content" class:hover={isHover}>
-        <div class="label">{label}</div>
+    <button
+        class="content"
+        class:hover={isHover}
+        on:mouseenter={onEnter}
+        on:mouseleave={onLeave}
+        on:click={item.onClick}
+    >
+        <div class="label">{item.label}</div>
         <div class="background-bar">
             <div class="background-box" />
         </div>
-    </div>
+    </button>
 </div>
 
 <style>
@@ -36,12 +45,14 @@
         margin-right: 1px;
     }
     .bar.hover {
-        background-color: white;
+        background-color: rgb(184, 221, 255);
         box-shadow: -20px 0px 20px rgb(3, 45, 122),
             -10px 0px 10px rgb(15, 65, 158), -3px 0px 5px rgb(94, 200, 204);
     }
 
     .content {
+        cursor: pointer;
+        all: unset;
         position: relative;
         padding: 0.5rem 0 0.6rem 2.5rem;
         color: lightgray;
@@ -57,28 +68,27 @@
         top: 2px;
         bottom: -2px;
         padding-left: 2px;
-        border-left: 3px solid rgb(69, 132, 250);
+        border-left: 3px solid rgb(56, 104, 194);
     }
     .background-box {
         background-image: linear-gradient(
             90deg,
-            rgb(6, 6, 88),
-            25%,
+            rgb(13, 13, 56),
+            40%,
             transparent,
-            50%,
+            80%,
             transparent
         );
         border-image: linear-gradient(
                 90deg,
-                rgb(69, 132, 250),
-                15%,
-                transparent,
+                rgb(15, 50, 114),
                 30%,
+                transparent,
+                50%,
                 transparent
             )
             1;
         border-image-width: 1px;
-        width: 100%;
         height: 100%;
     }
 
