@@ -96,7 +96,7 @@
         left: 0.5rem;
         position: absolute;
         transform: rotate(45deg);
-        box-shadow: black 0 0 0 0.5px, rgb(49, 160, 211) 0px 0px 0px 3px;
+        box-shadow: transparent 0 0 0 1px, rgb(49, 160, 211) 0px 0px 0px 3px;
     }
     .corner::after {
         content: "";
