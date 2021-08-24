@@ -51,8 +51,8 @@
     }
 
     .content {
-        cursor: pointer;
         all: unset;
+        cursor: pointer;
         position: relative;
         padding: 0.5rem 0 0.6rem 2.5rem;
         color: lightgray;
@@ -107,7 +107,7 @@
             rgba(79, 188, 224, 0.8),
             50%,
             rgba(8, 27, 78, 0.6),
-            /* rgba(129, 198, 221, 0.8), */ transparent
+            transparent
         );
     }
     .hover .label {
