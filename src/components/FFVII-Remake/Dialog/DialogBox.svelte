@@ -2,18 +2,28 @@
     import DialogButton from "./DialogButton.svelte";
     import Exclamation from "./Exclamation.svelte";
     import DialogOuterBorder from "./DialogOuterBorder.svelte";
+
+    export let date = "";
+    export let title = "";
+    export let subtitle = "";
+    export let subtitleExtra = "";
+    export let message = "";
+    export let acceptLabel = "Yes";
+    export let declineLabel = "No";
+    export let onAccept;
+    export let onDecline;
 </script>
 
 <DialogOuterBorder>
     <div class="box">
         <Exclamation />
-        <div class="datetime">08/22/2021 01:04:53 a.m.</div>
-        <div class="title">Ch. 17: Deliverance from Chaos</div>
-        <div class="extra">Sector 0 - Shinra Electric Power Company</div>
-        <div class="extra">Combat Simulator</div>
-        <div class="message">Resume playing from where you left off?</div>
-        <DialogButton button={{ label: "Yes" }} />
-        <DialogButton button={{ label: "No" }} />
+        <div class="datetime">{date}</div>
+        <div class="title">{title}</div>
+        <div class="extra">{subtitle}</div>
+        <div class="extra">{subtitleExtra}</div>
+        <div class="message">{message}</div>
+        <DialogButton button={{ label: acceptLabel, onClick: onAccept }} />
+        <DialogButton button={{ label: declineLabel, onClick: onDecline }} />
     </div>
 </DialogOuterBorder>
 
