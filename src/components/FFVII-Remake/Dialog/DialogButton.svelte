@@ -24,6 +24,7 @@
 
 <style>
     .container {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         display: flex;
         justify-content: center;
         position: relative;

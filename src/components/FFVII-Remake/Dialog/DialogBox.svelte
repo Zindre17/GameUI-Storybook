@@ -29,6 +29,7 @@
 
 <style>
     .box {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         font-size: 2rem;
         text-align: center;
         padding: 2rem 4rem 4rem 4rem;

@@ -4,6 +4,7 @@
 
 <style>
     div {
-        margin: 3em;
+        padding: 1rem;
+        background-color: black;
     }
 </style>

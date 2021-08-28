@@ -1,9 +1,9 @@
 import HealthBar from "./HealthBar.svelte";
-import DialogDecorator from "../Dialog/DialogDecorator.svelte"
+import HealthBarDecorator from "./HealthBarDecorator.svelte"
 
 export default {
     component: HealthBar,
-    decorators: [() => DialogDecorator],
+    decorators: [() => HealthBarDecorator],
     title: "FFVII Remake/HealthBar/HealthBar"
 }
 

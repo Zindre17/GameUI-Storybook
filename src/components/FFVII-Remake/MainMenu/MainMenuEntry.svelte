@@ -16,6 +16,9 @@
 
 <div class="container">
     <div class="bar" class:hover={isHover} />
+    <div class="background-bar">
+        <div class="background-box" />
+    </div>
     <button
         class="content"
         class:hover={isHover}
@@ -23,10 +26,7 @@
         on:mouseleave={onLeave}
         on:click={item.onClick}
     >
-        <div class="label">{item.label}</div>
-        <div class="background-bar">
-            <div class="background-box" />
-        </div>
+        {item.label}
     </button>
 </div>
 
@@ -37,6 +37,7 @@
         padding-left: 1px;
         border-left: 5px solid transparent;
         display: flex;
+        position: relative;
     }
 
     .bar {
@@ -46,14 +47,14 @@
     }
     .bar.hover {
         background-color: rgb(184, 221, 255);
-        box-shadow: -20px 0px 20px rgb(3, 45, 122),
-            -10px 0px 10px rgb(15, 65, 158), -3px 0px 5px rgb(94, 200, 204);
+        box-shadow: 0 0 20px 5px rgb(3, 45, 122), -10px 0 10px rgb(15, 65, 158),
+            -3px 0 5px rgb(94, 200, 204);
     }
 
     .content {
         all: unset;
         cursor: pointer;
-        position: relative;
+        z-index: 2;
         padding: 0.5rem 0 0.6rem 2.5rem;
         color: lightgray;
         font-size: 2em;
@@ -62,8 +63,7 @@
     }
     .background-bar {
         position: absolute;
-        z-index: -1;
-        left: 3px;
+        left: 10px;
         right: -3px;
         top: 2px;
         bottom: -2px;
@@ -73,7 +73,7 @@
     .background-box {
         background-image: linear-gradient(
             90deg,
-            rgb(13, 13, 56),
+            rgb(5, 13, 51),
             40%,
             transparent,
             80%,
@@ -81,7 +81,7 @@
         );
         border-image: linear-gradient(
                 90deg,
-                rgb(15, 50, 114),
+                rgb(11, 41, 97),
                 30%,
                 transparent,
                 50%,
@@ -93,6 +93,8 @@
     }
 
     .content.hover {
+        color: white;
+        text-shadow: 0.4rem 0.1rem rgba(14, 4, 61, 0.349);
         border-image: linear-gradient(
                 90deg,
                 aquamarine,
@@ -109,9 +111,5 @@
             rgba(8, 27, 78, 0.6),
             transparent
         );
-    }
-    .hover .label {
-        color: white;
-        text-shadow: 0.4rem 0.1rem rgba(14, 4, 61, 0.349);
     }
 </style>

@@ -1,7 +1,9 @@
 import DialogBox from "./DialogBox.svelte";
+import DialogBoxDecorator from "./DialogBoxDecorator.svelte";
 
 export default {
     component: DialogBox,
+    decorators: [() => DialogBoxDecorator],
     title: "FFVII Remake/Dialog/DialogBox"
 }
 

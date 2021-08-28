@@ -1,9 +1,9 @@
 import DialogButton from "./DialogButton.svelte";
-import DialogDecorator from "./DialogDecorator.svelte";
+import DialogButtonDecorator from "./DialogButtonDecorator.svelte";
 
 export default {
     component: DialogButton,
-    decorators: [() => DialogDecorator],
+    decorators: [() => DialogButtonDecorator],
     title: "FFVII Remake/Dialog/DialogButton",
 }
 

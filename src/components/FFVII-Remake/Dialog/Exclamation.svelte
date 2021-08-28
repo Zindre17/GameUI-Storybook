@@ -14,6 +14,9 @@
 </div>
 
 <style>
+    * {
+        box-sizing: border-box;
+    }
     .container {
         display: flex;
         align-items: center;
@@ -25,10 +28,10 @@
         display: flex;
         justify-content: center;
         transform: rotate(45deg);
-        margin: 0 15px;
+        margin: 0 16px;
         border: 2px solid rgb(62, 220, 252);
-        width: 52px;
-        height: 52px;
+        width: 60px;
+        height: 60px;
         padding: 5px;
     }
     .box > div {
@@ -37,13 +40,16 @@
         height: 100%;
     }
     .sign {
+        font-family: "Trebuchet MS", sans-serif;
         position: absolute;
         color: rgb(62, 220, 252);
-        font-size: 2rem;
+        font-size: 3rem;
         left: 0;
         right: 0;
+        top: 0;
+        bottom: 0;
         text-align: center;
-        font-weight: bolder;
+        line-height: 130%;
     }
     .lines {
         position: relative;

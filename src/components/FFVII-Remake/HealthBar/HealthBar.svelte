@@ -62,6 +62,7 @@
 
 <style>
     .container {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         position: relative;
         display: flex;
         height: 3rem;
@@ -78,7 +79,7 @@
         left: 0px;
         top: 0px;
         right: 30%;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         background-image: linear-gradient(
             90deg,
             rgba(50, 123, 218, 0.815),
@@ -93,7 +94,7 @@
     .secondary {
         font-size: 1.5rem;
         font-family: sans-serif monospace;
-        color: rgb(197, 197, 197);
+        color: rgb(218, 218, 218);
         text-shadow: 2px -1px rgba(0, 0, 0, 0.445);
         position: relative;
         margin: 0;
@@ -168,10 +169,10 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba(42, 68, 139, 0.199);
+        background-color: transparent;
         border: 1px solid rgba(118, 145, 158, 0.671);
         border-right: none;
-        padding: 3px;
+        padding: 2px;
         padding-right: 2px;
     }
 

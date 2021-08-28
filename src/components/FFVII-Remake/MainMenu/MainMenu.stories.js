@@ -1,7 +1,9 @@
 import MainMenu from "./MainMenu.svelte";
+import MenuDecorator from "./MenuDecorator.svelte";
 
 export default {
     component: MainMenu,
+    decorators: [() => MenuDecorator],
     title: "FFVII Remake/Main Menu/Menu",
 }
 
